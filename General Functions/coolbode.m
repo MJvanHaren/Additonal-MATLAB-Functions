@@ -19,7 +19,7 @@ function coolbode(varargin)
         else
             disp('Only magnitude bode are supported (''mag''), plotting default magnitude&phase bode')
         end
-        win = varargin{3};
+        win = varargin{3}*2*pi;
     elseif nargin > 4
         error('Please specify a maximum of 3 inputs');
     end

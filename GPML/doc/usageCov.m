@@ -5,7 +5,7 @@
 % Copyright (c) by Carl Edward Rasmussen and Hannes Nickisch, 2018-08-22.
 %                                      File automatically generated using noweb.
 clear all, close all
-n = 5; D = 3; x = randn(n,D); xs = randn(3,D);  % create a data set
+n = 5; D = 3; x = randn(n,D); xs = randn(20,D);  % create a data set
 
 % set up simple covariance functions
 cn  = {'covNoise'}; sn = .1;  hypn = log(sn);  % one hyperparameter
@@ -61,7 +61,8 @@ xp = randn(n,2*D); xsp = randn(3,2*D);
 % cov = cds; hyp = hypds; x = xd; xs = xsd;
 % cov = cfa; hyp = hypfa;
 % cov = cvl; hyp = hypvl;
-cov = cpr; hyp = hyppr; x = xp; xs = xsp;
+% cov = cpr; hyp = hyppr; x = xp; xs = xsp;
+cov = cga; hyp = hypga;
 
 % 1) query the number of parameters
 feval(cov{:})
